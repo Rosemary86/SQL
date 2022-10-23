@@ -1,0 +1,26 @@
+--Create a grocery store database:
+create table Grocery_Store (ID integer primary key, name text, section text, aisle integer, price integer);
+
+
+insert into Grocery_Store values (1, 'bananas', 'produce', 1, 1.5);
+insert into Grocery_Store values (2, 'plums', 'produce', 1, 0.75);
+insert into Grocery_Store values (3, 'ice cream', 'frozen', 10, 5);
+insert into Grocery_Store values (4, 'crackers', 'snacks', 5, 3.50);
+insert into Grocery_Store values (5, 'popcorn', 'snacks', 5, 5.50);
+insert into Grocery_Store values (6, 'dog food', 'pets', 13, 20);
+insert into Grocery_Store values (7, 'pillows', 'home', 14, 10);
+insert into Grocery_Store values (8, 'milk', 'dairy', 4, 3.5);
+insert into Grocery_Store values (9, 'eggs', 'dairy', 4, 4.5);
+insert into Grocery_Store values (10, 'blue jeans', 'clothing', 17, 35);
+insert into Grocery_Store values (11, 'candy', 'snacks', 5, 4);
+insert into Grocery_Store values (12, 'granola', 'bulk', 6, 6.50);
+insert into Grocery_Store values (13, 'toothpaste', 'hygeine', 15, 1.75);
+insert into Grocery_Store values (14, 'socks', 'clothing', 17, 5.25);
+insert into Grocery_store values (15, 'bagels', 'bread', 2, 2.50);
+
+
+--Display table in order by price:
+select * from grocery_store order by price;
+
+--Display average price of items in 'snack' section:
+select avg(price) from grocery_store where section='snacks';
